@@ -1,7 +1,7 @@
 <template lang="pug">
   .publication
     vi-media-object
-      img(slot="left" src="../assets/busy_hands_book_design_A5-01.jpg" width="300")
+      img(slot="left" src="../assets/busy-hand-1.jpg")
       .app-box
         h5 Busy Hands (2019-)
         p A statement captured from the website of International Labour Organization (ILO) p Work and Art are part of the human condition. From the first time that human beings gathered food, or built themselves shelter, or turned a skin pelt into clothing, work has been an integral part of our lives. And ever since the very first drawings on the walls of caves, we have been using art as a powerful means of expression.
@@ -11,7 +11,7 @@
         p 工作在我們社會中一種變革力量，藝術亦締造顛覆性改變的力量 - 它啓發與鼓動人們行動起來。
     .spacer
     vi-media-object
-      img(slot="left" src="../assets/v5_combined_outlined_2018_08_28_p2_p1_en.jpg" width="300")
+      img(slot="left" src="../assets/v5_combined_outlined_2018_08_28_p2_p1_en.jpg")
       .app-box
         h5 The existential invisible
         p Archivists have described the experience of dealing with documents and records as being secluded.  The inaccessibility of the island is one of the reasons for being idle. One must pay a visit to the invisible island to envision its uniqueness and existence.  Visitors may need guidance to navigate the features and landscapes of the unknown territory, 'Archive of the People' is here for you, paves the path and opens up the entrance to the island.

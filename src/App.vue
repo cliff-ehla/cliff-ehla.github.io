@@ -64,7 +64,7 @@
 
     &__main
       margin-top 2em
-      margin-left 4em
+      margin-left 6em
       flex 1 1 0
       @media(max-width 800px)
         margin-left 0
@@ -134,7 +134,6 @@
       border 1px solid black
       padding .3em 1em
       line-height 1
-      content 'Home'
       position absolute
       height 100%
       display flex
@@ -164,4 +163,34 @@
     color black
     padding 2em
     border 1px solid black
+
+  .app-img-stack
+    position relative
+    display inline-block
+    margin-bottom 20px
+    &__after, &__after2
+      background white
+      border 1px solid black
+      position absolute
+      left 5px
+      top 5px
+      width 100%
+      height 98%
+      z-index 2
+    &__after2
+      left 10px
+      top 10px
+      z-index 1
+    > img
+      position relative
+      z-index 3
+
+  .vi-row
+    display flex
+    flex-wrap wrap
+    .vi-col
+      width 50%
+      padding 4px
+      @media(max-width 600px)
+        width 100%
 </style>

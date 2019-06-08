@@ -71,7 +71,7 @@
       display block
       .vi-media-object__body
         margin-left 0
-        margin-top -8px
+        margin-top 1em
 
     &__left
       flex 0 0 200px

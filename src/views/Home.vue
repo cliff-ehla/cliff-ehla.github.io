@@ -1,8 +1,7 @@
 <template lang="pug">
   .home
     h3 Upcoming exhibitions
-    h5 Project: Busy Hands
-    p Exhibition: Courses of Action (Curated by Carlos Quijon, Jr.)
+    h1 Exhibition: Courses of Action (Curated by Carlos Quijon, Jr.)
     p Venue: Goethe-Institut, Hong Kong
     p Date: Jun 14 – Jul 13, 2019
     p Opening Reception: 13 June, 2019, 7:00pm
