@@ -1,16 +1,15 @@
 import http from "$lib/http";
 export const load = async ({fetch, params}) => {
-	return http.get(fetch, '/posts', {
+	return http.get(fetch, '/events', {
 		sort: 'createdAt:desc',
 		populate: {
 			author: true,
-			categories: true,
-			tags: true,
+			event_categories: true,
 			image: true
 		},
 		pagination: {
-			page: 1,
-			pageSize: 100
+			page: 2,
+			pageSize: 80
 		}
 	})
 }
