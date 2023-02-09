@@ -16,6 +16,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^2.0.0",
+		"dayjs": "^1.11.7",
 		"qs": "^6.11.0"
 	}
 }

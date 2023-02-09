@@ -11,7 +11,7 @@ const getQueryUrl = (resource, query) => {
 	})}`
 }
 
-const strapiClient = (() => {
+const http = (() => {
 	async function get (fetch, resource, query) {
 		resource = getQueryUrl(resource, query)
 		const res = await fetch(`${VITE_API_BASE}/api` + resource, {
@@ -57,4 +57,4 @@ const strapiClient = (() => {
 	}
 })()
 
-export default strapiClient
+export default http
