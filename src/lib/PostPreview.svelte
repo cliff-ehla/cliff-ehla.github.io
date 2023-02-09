@@ -20,7 +20,7 @@
 	</div>
 	<div class="ml-0 sm:ml-4 mt-2 sm:mt-0">
 		<h2 class="text-lg leading-tight font-bold">
-			<a href="/art-notes/{p.attributes.slug}">
+			<a href="/blog/{p.attributes.slug}">
 				{p.attributes.title}
 			</a>
 		</h2>
