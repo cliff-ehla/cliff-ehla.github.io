@@ -1,6 +1,4 @@
 <script>
-	import dayjs from 'dayjs'
-	//import AuthorsWidget from "./AuthorsWidget.svelte";
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 	export let post
 	$: p = post
@@ -27,7 +25,9 @@
 			</a>
 		</h2>
 		<div class="flex items-center">
-<!--			<AuthorsWidget authors={p.attributes.authors.data} createdAt={p.attributes.createdAt}/>-->
+			{#if p.attributes.author.data}
+				{p.attributes.author.data.attributes.name}
+			{/if}
 		</div>
 		{#if p.attributes.categories}
 			<div class="flex flex-wrap">
@@ -37,7 +37,7 @@
 				{/each}
 			</div>
 		{/if}
-		<p class="mb-2 text-gray-700 text-sm">{@html p.attributes.excerpt}</p>
+
 		{#if p.attributes.tags}
 			<div class="flex flex-wrap">
 				{#each p.attributes.tags.data as t}
