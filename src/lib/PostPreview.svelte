@@ -4,7 +4,7 @@
 	$: p = post
 </script>
 
-<a class="flex flex-col sm:flex-row">
+<a href="/blog/{p.attributes.slug}" class="flex flex-col sm:flex-row">
 	<div class="w-full sm:w-48 flex-shrink-0">
 
 		<img
@@ -20,9 +20,7 @@
 	</div>
 	<div class="ml-0 sm:ml-4 mt-2 sm:mt-0">
 		<h2 class="text-lg leading-tight font-bold">
-			<a href="/blog/{p.attributes.slug}">
-				{p.attributes.title}
-			</a>
+			{p.attributes.title}
 		</h2>
 		<div class="flex items-center">
 			{#if p.attributes.author.data}

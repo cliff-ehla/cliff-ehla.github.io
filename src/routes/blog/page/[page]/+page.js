@@ -9,8 +9,8 @@ export const load = async ({fetch, params}) => {
 			image: true
 		},
 		pagination: {
-			page: 1,
-			pageSize: 100
+			page: params.page,
+			pageSize: 12
 		}
 	})
 }
