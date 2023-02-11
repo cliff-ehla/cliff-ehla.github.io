@@ -22,8 +22,8 @@
 				{#if item.children}
 					<div class="absolute hidden group-hover:block pt-1 shadow-md rounded w-48">
 						{#each item.children as child}
-							<a href="{item.href}/category/{child.slug}/1" class:font-bold={child.slug === selected_category} class="block py-2 px-4 bg-white hover:bg-gray-100 text-blue-500">
-								{child.name}
+							<a href="{item.href}/category/{child.attributes.slug}/1" class:font-bold={child.attributes.slug === selected_category} class="block py-2 px-4 bg-white hover:bg-gray-100 text-blue-500">
+								{child.attributes.name}
 							</a>
 						{/each}
 					</div>
