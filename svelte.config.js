@@ -6,7 +6,10 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-	preprocess: vitePreprocess()
+	preprocess: vitePreprocess(),
+	prerender: {
+		handleHttpError: 'ignore'
+	}
 };
 
 export default config;

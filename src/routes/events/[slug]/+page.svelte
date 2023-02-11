@@ -16,7 +16,7 @@
 	<div class="flex flex-wrap my-4">
 		<span class="text-sm mr-1 mt-0.5 text-gray-500">檔案:</span>
 		{#each post.event_categories.data as t}
-			<a href="/art-notes/category/{t.attributes.slug}/1" class="text-base border-b border-gray-700 text-gray-700 mr-2 mb-1">{t.attributes.name}</a>
+			<a href="/events/category/{t.attributes.slug}/1" class="text-base border-b border-gray-700 text-gray-700 mr-2 mb-1">{t.attributes.name}</a>
 		{/each}
 	</div>
 	<div class="post-body">
