@@ -54,10 +54,10 @@
         {#if menuItem.children && menuItem.active}
           <div transition:slide class="border-t border-gray-300 bg-gray-50">
             {#each menuItem.children as child}
-              <a href="{menuItem.href}/category/{child.slug}/1"
-                 class:font-bold={child.slug === selected_category}
+              <a href="/{menuItem.type}/category/{child.attributes.slug}/1"
+                 class:font-bold={child.attributes.slug === selected_category}
                  class="h-12 px-8 flex items-center text-gray-600">
-                {child.name}
+                {child.attributes.name}
               </a>
             {/each}
           </div>
