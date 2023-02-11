@@ -15,13 +15,13 @@
   const items = [
 	  {
 		  name: "活動日誌",
-		  href: "/event",
+		  href: "/event/category/all/1",
 		  children: event_categories,
 		  mobile: true
 	  },
 	  {
 		  name: "文章分享",
-		  href: "/blog",
+		  href: "/blog/category/all/1",
 		  children: categories,
 		  mobile: true
 	  },

@@ -1,17 +1,19 @@
 <script>
 	export let data
 	$: post = data.attributes
+	$: p = post
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
+	import dayjs from "dayjs";
 </script>
 
 <div class="mx-auto max-w-screen-md px-4 leading-loose text-gray-700 text-lg">
-	{#if post.image.data}
-		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{post.image.data.attributes.url}" alt={post.title}>
-	{:else}
-		<img class="mt-8 mb-4 rounded-xl shadow-lg w-full" src="{VITE_IMAGE_BASE}{post.wp_large_url}" alt={post.title}>
-	{/if}
-	<h1 class="text-2xl text-gray-800 mb-4">{post.title}</h1>
+	<img
+					src={`${VITE_IMAGE_BASE}/blog/${p.createdAt.split('T')[0]}-${p.slug}/cover.jpg`}
+					class="shadow-lg rounded-lg mx-auto mb-8"
+					alt="missing image!">
+	<h1 class="text-2xl text-gray-800 my-4">{post.title}</h1>
 	<p>{post.author.data.attributes.name}</p>
+	<p>{dayjs(post.createdAt).format('DD MMM YYYY')}</p>
 	<div class="flex flex-wrap my-4">
 		<span class="text-sm mr-1 mt-0.5 text-gray-500">檔案:</span>
 		{#each post.categories.data as t}

@@ -8,8 +8,8 @@
 	let pagination = data.meta.pagination
 </script>
 
-<div class="container">
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<div class="mx-auto p-4 max-w-screen-lg">
+	<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 		{#each posts as post}
 			<PostPreview {post}/>
 		{/each}

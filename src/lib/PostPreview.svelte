@@ -8,7 +8,8 @@
 	<div class="w-full sm:w-48 flex-shrink-0">
 
 		<img
-						src={`https://empowerhk.s3.ap-southeast-1.amazonaws.com/blog/${p.attributes.createdAt.split('T')[0]}-${p.attributes.slug}/cover.jpg`}
+						src={`${VITE_IMAGE_BASE}/blog/${p.attributes.createdAt.split('T')[0]}-${p.attributes.slug}/cover.jpg`}
+						class="shadow-lg rounded-lg"
 						alt="missing image!">
 
 
