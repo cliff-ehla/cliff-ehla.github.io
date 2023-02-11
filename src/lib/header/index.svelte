@@ -15,7 +15,7 @@
   const items = [
 	  {
 		  name: "活動日誌",
-		  href: "/event/category/all/1",
+		  href: "/events/category/all/1",
 		  children: event_categories,
 		  mobile: true
 	  },
