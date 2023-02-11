@@ -26,7 +26,7 @@
 			<div class="flex flex-wrap">
 				<span class="text-xs mr-1 mt-0.5 text-gray-500">分類:</span>
 				{#each p.attributes.event_categories.data as t}
-					<a href="/art-notes/category/{t.attributes.slug}/1" class="text-sm border-b border-gray-700 text-gray-700 mr-2 mb-1">{t.attributes.name}</a>
+					<a href="/events/category/{t.attributes.slug}/1" class="text-sm border-b border-gray-700 text-gray-700 mr-2 mb-1">{t.attributes.name}</a>
 				{/each}
 			</div>
 		{/if}

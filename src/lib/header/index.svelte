@@ -18,7 +18,7 @@
 		  href: "/events/category/all/1",
 		  children: event_categories,
 		  mobile: true,
-		  type: 'event'
+		  type: 'events'
 	  },
 	  {
 		  name: "文章分享",

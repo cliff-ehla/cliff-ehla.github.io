@@ -2,12 +2,8 @@
 	export let data
 	import EventPreview from "$lib/EventPreview.svelte";
 	console.log(data)
-	const {
-		data: events,
-		meta: {
-			pagination: pagination
-		}
-	} = data
+	$: events = data.data
+	$: pagination = data.meta.pagination
 </script>
 
 <div class="mx-auto p-4 max-w-screen-lg">

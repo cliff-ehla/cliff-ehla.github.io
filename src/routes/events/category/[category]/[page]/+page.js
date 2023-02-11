@@ -1,6 +1,6 @@
 import http from "$lib/http";
 export const load = async ({fetch, params}) => {
-	return http.get(fetch, '/events', {
+	const query = {
 		sort: 'createdAt:desc',
 		populate: {
 			author: true,
@@ -8,8 +8,17 @@ export const load = async ({fetch, params}) => {
 			image: true
 		},
 		pagination: {
-			page: 2,
-			pageSize: 80
+			page: params.page,
+			pageSize: 12
 		}
-	})
+	}
+	const cat_slug = params.category
+	if (cat_slug !== 'all') {
+		query.filters = {
+			event_categories: {
+				slug: cat_slug
+			}
+		}
+	}
+	return http.get(fetch, '/events', query)
 }
