@@ -17,13 +17,15 @@
 		  name: "活動日誌",
 		  href: "/events/category/all/1",
 		  children: event_categories,
-		  mobile: true
+		  mobile: true,
+		  type: 'event'
 	  },
 	  {
 		  name: "文章分享",
 		  href: "/blog/category/all/1",
 		  children: categories,
-		  mobile: true
+		  mobile: true,
+		  type: 'blog'
 	  },
 	  {
 		  name: "團隊成員",

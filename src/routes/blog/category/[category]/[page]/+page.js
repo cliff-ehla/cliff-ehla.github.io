@@ -1,6 +1,6 @@
 import http from "$lib/http";
 export const load = async ({fetch, params}) => {
-	return http.get(fetch, '/posts', {
+	const query = {
 		sort: 'createdAt:desc',
 		populate: {
 			author: true,
@@ -12,5 +12,14 @@ export const load = async ({fetch, params}) => {
 			page: params.page,
 			pageSize: 12
 		}
-	})
+	}
+	const cat_slug = params.category
+	if (cat_slug !== 'all') {
+		query.filters = {
+			categories: {
+				slug: cat_slug
+			}
+		}
+	}
+	return http.get(fetch, '/posts', query)
 }

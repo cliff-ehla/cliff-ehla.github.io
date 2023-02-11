@@ -8,7 +8,7 @@
 	<div class="mx-auto max-w-screen-md px-4 flex justify-between px-8">
 		{#each items as item}
 			<div class="group sm:inline-block relative" class:hidden={!item.mobile} class:active={item.href === '/'+segment}>
-				<a href="{item.href}" class="inline-flex items-center py-2 px-4 text-blue-500 group-hover:bg-blue-500 group-hover:text-white sm:text-lg md:text-xl">
+				<a href="/{item.type}/category/all/1" class="inline-flex items-center py-2 px-4 text-blue-500 group-hover:bg-blue-500 group-hover:text-white sm:text-lg md:text-xl">
 					<span>{item.name}</span>
 					{#if item.children}
 						<svg
@@ -22,7 +22,7 @@
 				{#if item.children}
 					<div class="absolute hidden group-hover:block pt-1 shadow-md rounded w-48">
 						{#each item.children as child}
-							<a href="{item.href}/category/{child.attributes.slug}/1" class:font-bold={child.attributes.slug === selected_category} class="block py-2 px-4 bg-white hover:bg-gray-100 text-blue-500">
+							<a href="/{item.type}/category/{child.attributes.slug}/1" class:font-bold={child.attributes.slug === selected_category} class="block py-2 px-4 bg-white hover:bg-gray-100 text-blue-500">
 								{child.attributes.name}
 							</a>
 						{/each}
