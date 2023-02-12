@@ -12,7 +12,9 @@
 					class="shadow-lg rounded-lg mx-auto mb-8"
 					alt="missing image!">
 	<h1 class="text-2xl text-gray-800 my-4">{post.title}</h1>
-	<p>{post.author.data.attributes.name}</p>
+	{#if post.author.data}
+		<p>{post.author.data.attributes.name}</p>
+	{/if}
 	<p>{dayjs(post.createdAt).format('DD MMM YYYY')}</p>
 	<div class="flex flex-wrap my-4">
 		<span class="text-sm mr-1 mt-0.5 text-gray-500">檔案:</span>

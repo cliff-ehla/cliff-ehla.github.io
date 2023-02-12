@@ -37,12 +37,12 @@
 			</div>
 		{/if}
 
-		<!--{#if p.attributes.tags}-->
-		<!--	<div class="flex flex-wrap">-->
-		<!--		{#each p.attributes.tags.data as t}-->
-		<!--			<a href="/tag/{t.attributes.slug}/1" class="text-xs px-1 bg-gray-200 text-blue-900 italic rounded border-gray-200 border mr-2 mb-1">{t.attributes.name}</a>-->
-		<!--		{/each}-->
-		<!--	</div>-->
-		<!--{/if}-->
+		{#if p.attributes.tags}
+			<div class="flex flex-wrap">
+				{#each p.attributes.tags.data as t}
+					<span class="text-xs px-1 bg-gray-200 text-blue-900 italic rounded border-gray-200 border mr-2 mb-1">{t.attributes.name}</span>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </a>
