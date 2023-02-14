@@ -1,4 +1,5 @@
 export let prerender = true
+export let trailingSlash = 'always'
 import http from "../lib/http.js";
 export const load = async ({fetch}) => {
 	const [
