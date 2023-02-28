@@ -28,3 +28,7 @@
 		{/each}
 	</div>
 </div>
+
+<svelte:head>
+	<title>{post.title}</title>
+</svelte:head>

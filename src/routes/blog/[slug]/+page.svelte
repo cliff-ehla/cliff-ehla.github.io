@@ -34,6 +34,10 @@
 <!--	</div>-->
 </div>
 
+<svelte:head>
+	<title>{post.title}</title>
+</svelte:head>
+
 <!--<div class="mx-auto max-w-screen-md px-4">-->
 <!--	{#if post.related_posts.data.length}-->
 <!--		<h2 class="font-bold text-xl mb-4">Related readings</h2>-->
