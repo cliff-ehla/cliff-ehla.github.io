@@ -2,9 +2,6 @@
 	import PostPreview from "$lib/PostPreview.svelte";
 	export let data
 	$: posts = data.data
-	$:{
-		console.log(posts)
-	}
 	let pagination = data.meta.pagination
 	import {page} from "$app/stores";
 </script>

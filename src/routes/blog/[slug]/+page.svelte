@@ -1,29 +1,36 @@
 <script>
 	export let data
-	$: post = data.attributes
+	$: post = data
 	$: p = post
 	const VITE_IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE
 	import dayjs from "dayjs";
 </script>
 
 <div class="mx-auto max-w-screen-md px-4 leading-loose text-gray-700 text-lg">
-	<img
-					src={`${VITE_IMAGE_BASE}/blog/${p.createdAt.split('T')[0]}-${p.slug}/cover.jpg`}
-					class="shadow-lg rounded-lg mx-auto mb-8"
-					alt="missing image!">
-	<h1 class="text-2xl text-gray-800 my-4">{post.title}</h1>
-	{#if post.author.data}
-		<p>{post.author.data.attributes.name}</p>
+	{#if post.attributes.image.data}
+		<img
+						src={post.attributes.image.data.attributes.formats.small.url}
+						class="shadow-lg rounded-lg mx-auto mb-8"
+						alt={p.attributes.title}>
+	{:else}
+		<img
+						src={`${VITE_IMAGE_BASE}/blog/${p.attributes.createdAt.split('T')[0]}-${p.attributes.slug}/cover.jpg`}
+						class="shadow-lg rounded-lg mx-auto mb-8"
+						alt={p.attributes.title}>
 	{/if}
-	<p>{dayjs(post.createdAt).format('DD MMM YYYY')}</p>
+	<h1 class="text-2xl text-gray-800 my-4">{post.attributes.title}</h1>
+	{#if post.attributes.author.data}
+		<p>{post.attributes.author.data.attributes.name}</p>
+	{/if}
+	<p>{dayjs(post.attributes.createdAt).format('DD MMM YYYY')}</p>
 	<div class="flex flex-wrap my-4">
 		<span class="text-sm mr-1 mt-0.5 text-gray-500">檔案:</span>
-		{#each post.categories.data as t}
+		{#each post.attributes.categories.data as t}
 			<a href="/blog/category/{t.attributes.slug}/1" class="text-base border-b border-gray-700 text-gray-700 mr-2 mb-1">{t.attributes.name}</a>
 		{/each}
 	</div>
 	<div class="post-body">
-		{@html post.content}
+		{@html post.attributes.content}
 	</div>
 <!--	TODO-->
 <!--	<div class="my-4 flex flex-wrap">-->
