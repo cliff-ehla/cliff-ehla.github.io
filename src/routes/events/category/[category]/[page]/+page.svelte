@@ -1,7 +1,6 @@
 <script>
 	export let data
 	import EventPreview from "$lib/EventPreview.svelte";
-	console.log(data)
 	$: events = data.data
 	$: pagination = data.meta.pagination
 </script>

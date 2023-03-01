@@ -7,9 +7,15 @@
 
 <a href="/events/{p.attributes.slug}" class="hover:bg-blue-50 hover:text-blue-600 flex flex-col sm:flex-row my-6">
 	<div class="w-full sm:w-48 flex-shrink-0">
-		<img
-						src={`https://empowerhk.s3.ap-southeast-1.amazonaws.com/events/${p.attributes.createdAt.split('T')[0]}-${p.attributes.slug}/cover.jpg`}
-						alt="missing image!">
+		{#if event.attributes.image.data}
+			<img
+							src={event.attributes.image.data.attributes.formats.small.url}
+							alt={p.attributes.title}>
+		{:else}
+			<img
+							src={`${VITE_IMAGE_BASE}/events/${p.attributes.createdAt.split('T')[0]}-${p.attributes.slug}/cover.jpg`}
+							alt={p.attributes.title}>
+		{/if}
 	</div>
 	<div class="ml-0 sm:ml-4 mt-2 sm:mt-0">
 		<p class="italic text-blue-900 font-bold">
