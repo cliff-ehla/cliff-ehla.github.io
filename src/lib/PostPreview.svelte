@@ -6,11 +6,17 @@
 
 <a href="/blog/{p.attributes.slug}" class="flex flex-col sm:flex-row">
 	<div class="w-full sm:w-48 flex-shrink-0">
-
-		<img
-						src={`${VITE_IMAGE_BASE}/blog/${p.attributes.createdAt.split('T')[0]}-${p.attributes.slug}/cover.jpg`}
-						class="shadow-lg rounded-lg"
-						alt="missing image!">
+		{#if p.attributes.image.data}
+			<img
+					src={p.attributes.image.data.attributes.url}
+					class="shadow-lg rounded-lg"
+					alt="missing image!">
+		{:else}
+			<img
+					src={`${VITE_IMAGE_BASE}/blog/${p.attributes.createdAt.split('T')[0]}-${p.attributes.slug}/cover.jpg`}
+					class="shadow-lg rounded-lg"
+					alt="missing image!">
+		{/if}
 
 
 		<!--{#if p.attributes.image.data}-->
