@@ -1,7 +1,7 @@
 import http from "$lib/http";
 export const load = async ({fetch, params}) => {
 	const query = {
-		sort: 'createdAt:desc',
+		sort: 'start_date:desc',
 		populate: {
 			author: true,
 			event_categories: true,
