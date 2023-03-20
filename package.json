@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"start": "serve build/index.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -20,6 +21,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^2.0.0",
 		"dayjs": "^1.11.7",
-		"qs": "^6.11.0"
+		"qs": "^6.11.0",
+		"serve": "^14.2.0"
 	}
 }
