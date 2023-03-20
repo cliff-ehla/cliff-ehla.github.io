@@ -36,3 +36,11 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Update site
+
+1. Turn on Postgres, Strapi
+2. Go to CMS and create post
+3. Build the site `npm run build`
+4. Upload to S3 `aws s3 sync /Users/joyce/website-dev/empowerhk-website/build s3://empower.hk --delete --cache-control max-age=no-cache`
+ref: https://stackoverflow.com/questions/42531643/amazon-s3-static-web-hosting-caching
