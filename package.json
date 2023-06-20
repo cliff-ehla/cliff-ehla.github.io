@@ -7,7 +7,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"start": "serve build/index.js",
-		"deploy": "push-dir --dir=build --branch=master --cleanup"
+		"deploy": "push-dir --dir=build --branch=master --cleanup --remote gh-page"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
