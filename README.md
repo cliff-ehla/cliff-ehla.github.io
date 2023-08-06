@@ -41,6 +41,5 @@ You can preview the production build with `npm run preview`.
 
 1. Turn on Postgres, Strapi
 2. Go to CMS and create post
-3. Build the site `npm run build`
-4. Upload to S3 `aws s3 sync /Users/joyce/website-dev/empowerhk-website/build s3://empower.hk --delete --cache-control max-age=no-cache`
-ref: https://stackoverflow.com/questions/42531643/amazon-s3-static-web-hosting-caching
+3. Build the static site into /build folder `npm run build`
+4. Upload the /build folder to Github Page `npm run deploy`
