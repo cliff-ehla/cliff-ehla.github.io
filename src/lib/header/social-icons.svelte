@@ -1,6 +1,4 @@
 <script>
-
-
   const icons = [
     {
       ariaLabel: "Facebook profile",
@@ -16,6 +14,19 @@
       svgViewBox: "0 0 24 24"
     }
   ];
+
+  const onCopyEmail = () => {
+    navigator.clipboard.writeText("askempowerhk@gmail.com");
+    copied = true
+  }
+
+  let email_dialog = false
+  let copied = false
+
+  const onCloseDialog = () => {
+    email_dialog = false
+    copied = false
+  }
 </script>
 
 <div class="flex content-center">
@@ -34,4 +45,33 @@
       </svg>
     </a>
   {/each}
+  <div class="text-gray-400 hover:text-blue-500 sm:p-2 p-1">
+    <button on:click={() => {email_dialog = !email_dialog}} class="relative group fill-current w-6 h-6 sm:h-8 sm:w-8 flex items-center justify-center bg-gray-100 opacity-50">
+      <img src="/email.png" alt="email">
+    </button>
+  </div>
 </div>
+
+{#if email_dialog}
+  <div class="fixed inset-0 z-40 bg-black/[0.4]"></div>
+  <div on:click={onCloseDialog} class="fixed inset-0 z-50 flex items-center justify-center">
+    <div on:click|stopPropagation class="w-[300px] h-[200px] bg-white border border-blue-500 p-8 rounded-lg flex items-center justify-center relative">
+      <div>
+        <div class="text-lg mb-4">askempowerhk@gmail.com</div>
+        <div class="flex justify-center">
+          <button on:click={onCloseDialog} class="mr-2 bg-blue-100 text-blue-500 rounded px-4 py-2 text-sm" on:click={onCopyEmail}>
+            返回
+          </button>
+          <button class="bg-blue-500 text-white rounded px-4 py-2 text-sm" on:click={onCopyEmail}>
+            複製電郵地址
+          </button>
+        </div>
+        {#if copied}
+          <div class="text-amber-700 text-sm p-4 absolute bottom-0 left-0 right-0 text-center">
+            電郵地址已複製
+          </div>
+        {/if}
+      </div>
+    </div>
+  </div>
+{/if}
