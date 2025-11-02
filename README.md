@@ -43,3 +43,6 @@ You can preview the production build with `npm run preview`.
 2. Go to CMS and create post
 3. Build the static site into /build folder `npm run build`
 4. Upload the /build folder to Github Page `npm run deploy`
+
+
+-test commit-
